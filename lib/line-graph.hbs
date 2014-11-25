@@ -1,0 +1,48 @@
+
+<div class="Chartable">
+  <style>
+    .Chartable {
+      position: relative;
+    }
+    .Chartable-svg {
+      position: relative;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+    .Chartable-line {
+      fill: none;
+    }
+    .Chartable-area {}
+    .Chartable-rules {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    .Chartable-rule {
+      position: absolute;
+      width: 100%;
+      border-top-width: 1px;
+      border-top-style: solid;
+    }
+  </style>
+  <div class="Chartable-rules">
+    {{#each rules }}
+      <div style="top:{{ yPosition }}px" class="Chartable-rule">
+        <div class="Chartable-label">{{ value }}</div>
+      </div>
+    {{/each}}
+  </div>
+  <svg viewBox="0 0 {{ width }} {{ height }}"
+    class="Chartable-svg"
+    width="{{ width }}"
+    height="{{ height }}"
+    preserveAspectRatio="none"
+    fill="currentcolor">
+    <path class="Chartable-area" d="{{ areaD }}"/>
+    <path class="Chartable-line" d="{{ lineD }}"/>
+  </svg>
+</div>
+

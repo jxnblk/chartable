@@ -1,0 +1,15 @@
+{
+  "name": "chartable",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-statistics": "0.0.20",
+    "handlebars": "^2.0.0"
+  }
+}

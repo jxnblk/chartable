@@ -1,0 +1,448 @@
+/**
+ * Scalable and Modular Architecture for CSS
+ */
+
+/**
+ * Base
+ */
+body {
+    margin: 0;
+    padding: 0;
+
+    background: #FFF url('/img/subtle_freckles.png');
+
+    font-family: "Bell MT", BellMT, Garamond, Georgia, “Times New Roman”, Times, serif;
+    line-height: 1.5;
+    color: #333;
+}
+
+pre {
+    margin: 0; /* overrides browser default of 1em 0 */
+}
+
+pre code {
+    display: block;
+    padding: 10px; 
+    overflow: auto;   
+}
+
+code {
+     background-color: rgba(51, 153, 204, 0.1);
+}
+
+a:link {
+    color: hsla(200, 60%, 30%, 1)
+}
+
+a:visited {
+    color: hsla(200, 30%, 30%, 1)
+}
+a:hover {
+    color: hsla(200, 60%, 40%, 1)
+}
+
+table {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+h1 {
+    margin: 0 0 .5em;
+    font-size: 200%;
+    line-height: 1.1;
+}
+
+h2, h3 {
+    margin: 0;
+}
+
+h4 {
+    margin-bottom: 0;
+}
+
+p {
+    margin: 0 0 1em;
+
+    /* HYPHENATE ALL THE THINGS! */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -o-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+ol {
+    margin-top: 0;
+}
+
+/**
+ * Layout
+ */
+.l-user {
+    background-color: #091F29;
+    background-color: rgba(10, 31, 41, 0.8); 
+    color: #FFF;
+    text-align: right;
+    font-size: 90%;
+}
+
+.l-user a {
+    color: #FFF;
+    padding: 10px;
+}
+
+.l-header {
+    background-color: rgba(51, 153, 204, 0.5); 
+}
+
+.l-footer {
+    background-color:#EEE;
+    font-size: 80%;
+}
+
+.l-footer h2 {
+    font-size: 100%;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.l-footer p {
+    margin: 0 0 1em;
+}
+
+.l-header, .l-content, .l-footer {
+    padding: 0 2em;
+}
+
+/**
+ * Constrained layout
+ */
+
+.l-constrained {
+    max-width: 750px;
+    margin: auto;
+    padding: 1.5em 0;
+    overflow: hidden;
+}
+
+.l-constrained-tighter {
+    padding: .2em 0;
+}
+
+/* 2 col layout */
+.l-col-1-2 {
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-right: 20px;
+}
+
+
+
+/**
+ *  Third Party
+ */
+#disqus_thread {
+    max-width: 500px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: 1px solid #CCC;
+    background-color: rgba(0,0,0,.1);
+    clear: both;
+}
+
+
+/**
+ * CakePHP Form Controls
+ */
+.input {
+    margin-bottom: 1em;
+}
+
+.input.password label, 
+.input.text label {
+    display: inline-block;
+    width: 20%;
+
+    /* IE7 inline-block hack */
+    *zoom: 1;
+    *display: inline;
+
+}
+
+.input.text input {
+    width: 75%;
+}
+
+/* used for auth messaging */
+.message {
+    padding: 3px 10px;
+    border-radius: 5px; 
+    background-color: #DDD;
+    color: #C00;
+
+}
+
+.error-message {
+    margin-left: 20%;
+    padding: 3px 10px;
+    border-radius: 5px;
+    background-color: #FCC;
+    font-size: 90%;
+}
+
+.input.checkbox {
+    margin-left: 20%;
+}
+
+.input.checkbox label {
+    padding-left: 8px;
+}
+
+.intro img {
+    float: left; 
+    margin-right:20px; 
+}
+
+/**
+ * Button
+ */
+
+.btn {
+    display: inline-block;
+    padding: 3px 30px;
+    border-radius: 25px;
+    background-color: #4A6F81;
+    background-image: -webkit-linear-gradient(#61AACE, #4A6F81);
+    background-image: -moz-linear-gradient(#61AACE, #4A6F81);
+    box-shadow: 0 0 0 1px #4A6F81;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.btn-small {
+    font-size: 120%;
+}
+
+.btn-soldout {
+    opacity: .5;
+    text-decoration: line-through;
+}
+
+a.btn:link { color: #FFF; }
+a.btn:visited { color: #FFF; }
+a.btn:hover { 
+    background: -webkit-linear-gradient(#4AB0E3, #4A6F81), #4A6F81;
+    background: -moz-linear-gradient(#4AB0E3, #4A6F81), #4A6F81;
+}
+
+/**
+ * Header module
+ * unique header treatment
+ */
+
+.logo {
+}
+
+.logo h2 > a {
+    text-decoration: none;
+}
+
+.logo h3 {
+    margin: 0;
+    padding: 0 0 0 30px;
+    font-size: 100%;
+}
+
+.hd {
+    font-size: 24px; 
+    margin: 0;
+    padding: 0;
+
+    line-height: .8;
+}
+
+.hd-line {
+    display: block;
+    color: #222;
+}
+
+.hd-line2 {
+    padding-left: 1.1em;
+}
+
+
+.workshoptitle { 
+  font-size: 400%;
+}
+
+.workshoptitle > :first-child {
+  font-size:50%;
+}
+
+
+.center {
+  text-align: center;
+}
+/* VIEW STATE: large header */ 
+.view-home .hd {
+    font-size: 48px;
+}
+
+.view-home .logo {
+    padding-left: 110px;
+    background: url(/img/jack-head.png) no-repeat 0 0;
+    background-size: 112px 101px;
+}
+/**
+ * Article
+ */
+
+.article-aside {
+}
+
+/* if the screen is wide enough, put the sidebar on the side */
+@media screen and (min-width: 800px) {
+    .article {
+        width: 500px;
+        float: left;
+    }
+
+    .article-aside {
+        width: 220px;
+        float: right;
+        font-size: 90%;
+    }
+}
+
+
+/***
+ * Example Module
+ **/
+
+.exm {
+    overflow: hidden;
+    margin: 0 0 1em;
+    border: 1px solid rgba(51, 153, 204, 0.6);
+    box-shadow: 3px 3px 6px rgba(0,0,0,.1);
+}
+
+.exm img {
+    vertical-align: middle;
+}
+
+.exm-caption {
+    padding: 5px 10px;
+    margin: 0;
+    background-color: rgba(51, 153, 204, 0.3);
+}
+
+.exm pre b {
+    background-color: #FFE;
+}
+/**
+ * Photo Module
+ */
+
+.photo {
+    border: 10px solid #CCC;
+    margin: 20px;
+}
+
+/**
+ * Location Module
+ */
+
+.location {
+    position: relative; /* allows for absolute price positioning */
+    margin-bottom: 1em;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(51, 153, 204, 0.2); 
+
+}
+
+.location h3 {
+    font-size: 160%;
+    line-height: 1.1;
+}
+.location h4 {
+    margin: 0;
+}
+
+.location-pricing {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 170px;
+    text-align: right;
+    line-height: 1.2;
+}
+
+.location-pricing p {
+    font-size: 80%;
+}
+
+.location-pricing h4 {
+    font-size: 200%;
+}
+
+.location-pricing h4 em {
+    display:block;
+}
+
+/* Comparison Table */
+.comparison {
+    margin: 1em 0; 
+    border: 1px solid #CCC;   
+    border-width: 1px 0;
+}
+.comparison td {
+    text-align: center;
+}
+
+.comparison tbody th {
+    text-align: left;
+    font-weight: normal;
+}
+
+
+/* acclaim blockquote */
+
+.acclaim {
+    clear:both; 
+    font-size: 80%;
+}
+
+.acclaim blockquote {
+    display: inline-block;
+    margin: 0;
+    padding: 0 20px 20px 0;
+    width: 33%;
+    vertical-align: top; 
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+
+    *display: inline;
+    *zoom: 1;
+}
+
+.acclaim p {
+    margin: 0;
+}
+
+/* twitter widget */
+
+div.twitter-tweet-rendered {
+    margin: 10px!important; /* need to override twitter style */
+    display: inline-block !important;
+    vertical-align: top;
+    max-width: 350px!important;
+}
+
+
