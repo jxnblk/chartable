@@ -13,7 +13,8 @@
     .Chartable-bar {
     }
     .Chartable-rules,
-    .Chartable-values {
+    .Chartable-values,
+    .Chartable-labels {
       position: absolute;
       top: 0;
       right: 0;
@@ -26,16 +27,22 @@
     }
     .Chartable-rule {
       position: absolute;
+      text-align: left;
       width: 100%;
       border-top-width: 1px;
       border-top-style: solid;
     }
-    .Chartable-label {}
+    .Chartable-label {
+      position: absolute;
+      text-align: center;
+    }
   </style>
   <div class="Chartable-rules">
     {{#each rules }}
       <div class="Chartable-rule" style="top:{{ yPosition }}px">
-        <div class="Chartable-label">{{ value }}</div>
+        {{#if ruleLabels }}
+          <div class="Chartable-label">{{ value }}</div>
+        {{/if}}
       </div>
     {{/each}}
   </div>
@@ -46,6 +53,15 @@
       </div>
     {{/each}}
   </div>
+  {{#if labels }}
+    <div class="Chartable-labels">
+      {{#each labels }}
+        <div class="Chartable-label Chartable-label--x" style="top:{{ yPosition }}px;left:{{ left }}%;right:{{ right }}%">
+          {{ value }}
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
   <svg viewBox="0 0 {{ width }} {{ height }}"
     class="Chartable-svg"
     width="{{ width }}"

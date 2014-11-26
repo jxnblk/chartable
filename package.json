@@ -11,5 +11,8 @@
   "devDependencies": {
     "css-statistics": "0.0.20",
     "handlebars": "^2.0.0"
+  },
+  "dependencies": {
+    "humanize-plus": "^1.5.0"
   }
 }

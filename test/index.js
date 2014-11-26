@@ -35,6 +35,6 @@ function makeLineGraph(src) {
 makeLineGraph('basscss.css');
 makeLineGraph('smacss.css');
 
-var barChart = chartable.barChart([48,56,16,12,3,4,5,64]);
+var barChart = chartable.barChart([48,56,16,12,3,4,5,64], { height: 320 });
 fs.writeFileSync(path.join(__dirname, 'bar-chart.html'), barChart);
 
