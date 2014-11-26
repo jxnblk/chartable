@@ -1,9 +1,60 @@
 
 <div class="Chartable Chartable--bar-chart">
+  <style>
+    .Chartable {
+      position: relative;
+    }
+    .Chartable-svg {
+      position: relative;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+    .Chartable-bar {
+    }
+    .Chartable-rules,
+    .Chartable-values {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    .Chartable-value {
+      position: absolute;
+      text-align: center;
+    }
+    .Chartable-rule {
+      position: absolute;
+      width: 100%;
+      border-top-width: 1px;
+      border-top-style: solid;
+    }
+    .Chartable-label {}
+  </style>
+  <div class="Chartable-rules">
+    {{#each rules }}
+      <div class="Chartable-rule" style="top:{{ yPosition }}px">
+        <div class="Chartable-label">{{ value }}</div>
+      </div>
+    {{/each}}
+  </div>
+  <div class="Chartable-values">
+    {{#each values }}
+      <div class="Chartable-value" style="top:{{ yPosition }}px; left:{{ left }}%;right:{{ right }}%">
+          {{ value }}
+      </div>
+    {{/each}}
+  </div>
   <svg viewBox="0 0 {{ width }} {{ height }}"
+    class="Chartable-svg"
+    width="{{ width }}"
+    height="{{ height }}"
+    preserveAspectRatio="none"
     fill="currentcolor">
     {{#each bars }}
-      <path d="{{ d }}"/>
+      <path class="Chartable-bar" d="{{ d }}"/>
     {{/each}}
   </svg>
+
 </div>
