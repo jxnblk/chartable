@@ -1,18 +1,31 @@
 {
   "name": "chartable",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Responsive SVG charts and graphs",
   "main": "index.js",
   "scripts": {
     "test": "node test"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Brent Jackson",
+  "license": "MIT",
   "devDependencies": {
-    "css-statistics": "0.0.20",
-    "handlebars": "^2.0.0"
+    "css-statistics": "0.0.20"
   },
   "dependencies": {
+    "handlebars": "^2.0.0",
     "humanize-plus": "^1.5.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jxnblk/chartable.git"
+  },
+  "keywords": [
+    "SVG",
+    "chart",
+    "graph"
+  ],
+  "bugs": {
+    "url": "https://github.com/jxnblk/chartable/issues"
+  },
+  "homepage": "https://github.com/jxnblk/chartable"
 }
