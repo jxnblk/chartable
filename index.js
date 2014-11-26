@@ -1,6 +1,9 @@
 
 
 module.exports = {
-  lineGraph: require('./lib/line-graph')
+  lineGraph: require('./lib/line-graph'),
+  barChart: require('./lib/bar-chart'),
+  findMin: require('./lib/find-min'),
+  findMax: require('./lib/find-max')
 };
 
