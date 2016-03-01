@@ -28,6 +28,10 @@
       border-top-style: solid;
     }
     .Chartable-label {}
+    .Chartable-point:hover {
+      fill: #ce5230;
+      opacity: 1;
+    }
   </style>
   <div class="Chartable-rules">
     {{#each rules }}
@@ -44,6 +48,13 @@
     fill="currentcolor">
     <path class="Chartable-area" d="{{ areaD }}"/>
     <path class="Chartable-line" d="{{ lineD }}"/>
+
+    {{#each labels }}
+    <circle data-toggle="tooltip" title="{{value}}" class="Chartable-point" cx="{{ xPos }}" cy="{{ yPos }}" r="2.5" fill="#202b35" opacity=".2" />
+    {{/each}}
   </svg>
+
+
+
 </div>
 
