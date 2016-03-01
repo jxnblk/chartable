@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "handlebars": "^2.0.0",
-    "humanize-plus": "^1.5.0"
+    "humanize-plus": "^1.5.0",
+    "is-plain-object": "^2.0.1"
   },
   "repository": {
     "type": "git",
