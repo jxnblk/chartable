@@ -18,8 +18,9 @@ function specificityGraph(selectors) {
     if (b > 1000) b = 1000;
     if (c > 100) c = 100;
     if (d > 10) d = 10;
-    result.push(a + b + c + d);
+    result.push({ value: a + b + c + d, label: selector.selector });
   });
+
   return result;
 }
 

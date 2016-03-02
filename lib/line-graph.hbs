@@ -27,8 +27,7 @@
       border-top-width: 1px;
       border-top-style: solid;
     }
-    .Chartable-label {}
-    .Chartable-point:hover {
+    .Chartable-point {
       fill: #ce5230;
       opacity: 1;
     }
@@ -50,7 +49,7 @@
     <path class="Chartable-line" d="{{ lineD }}"/>
 
     {{#each labels }}
-    <circle data-toggle="tooltip" title="{{value}}" class="Chartable-point" cx="{{ xPos }}" cy="{{ yPos }}" r="2.5" fill="#202b35" opacity=".2" />
+    <circle data-toggle="tooltip" title="{{value}}" class="Chartable-point" cx="{{ xPos }}" cy="{{ yPos }}" r="3" />
     {{/each}}
   </svg>
 
